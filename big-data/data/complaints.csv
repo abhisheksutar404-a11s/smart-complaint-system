@@ -1,0 +1,18 @@
+id,category,created_at,description,email,location,name,priority,status,confidence,predicted_category
+1,Road,"2026-08-29 00:00:00.000000","Road is damaged near my area",abhishek@gmail.com,Kolhapur,Abhishek,High,Open,NULL,NULL
+2,Road,"2026-08-29 00:00:00.000000","Road is damaged near my area",abhishek@gmail.com,Kolhapur,Abhishek,High,Pending,NULL,NULL
+3,Road,"2026-08-29 00:00:00.000000","Road is damaged near my area",abhishek@gmail.com,Kolhapur,Abhishek,High,Pending,NULL,NULL
+4,Road,"2026-08-29 00:00:00.000000","Road is damaged near my area",abhishek@gmail.com,Kolhapur,Abhishek,High,Pending,0.21035366161441227,Maintenance
+5,Road,"2026-08-29 00:00:00.000000","Road is damaged near my area",abhishek@gmail.com,Kolhapur,Abhishek,High,Pending,0.21035366161441227,Maintenance
+6,Road,"2026-10-10 00:00:00.000000","Garbage has not been collected for several days",abhishek@gmail.com,Kolhapur,Abhishek,High,Pending,NULL,NULL
+7,Road,"2026-10-10 00:00:00.000000","Garbage has not been collected for several days",abhishek@gmail.com,Kolhapur,Abhishek,High,Pending,NULL,NULL
+8,Technical,"2026-10-10 00:00:00.000000","Street lights are not working in my area",abhi23@gmail.com,NULL,abhishek,Medium,Pending,0.30203205374596453,Maintenance
+9,Technical,"2026-10-10 00:00:00.000000","My computer is not working",test@example.com,Kolhapur,"Test User",Medium,Pending,NULL,NULL
+10,Technical,"2026-10-10 00:00:00.000000","My computer is not working",test@example.com,Kolhapur,"Test User",Medium,Pending,0.3391383209158563,Technical
+11,Road,"2026-10-10 00:00:00.000000","Garbage has not been collected for several days",abhishek@gmail.com,Kolhapur,Abhishek,High,Pending,0.18972324002732707,Technical
+12,Finance,"2026-10-19 00:00:00.000000","money's follows man money's follow",user123@gmail.com,NULL,users,Low,Pending,0.16666666666666669,Account
+13,Technical,NULL,"Testing public complaint submission",securitytest@example.com,Kolhapur,"Security Test User",Medium,Resolved,0.16666666666666669,Account
+14,Technical,"2026-10-20 00:00:00.000000","My college computer lab computer is not starting.",test@example.com,NULL,"Test User",Medium,Pending,0.4121848987858559,Technical
+15,Technical,"2026-10-20 00:00:00.000000","My college computer lab computer is not starting.",test@example.com,NULL,"Test User",High,"In Progress",0.4121848987858559,Technical
+16,Technical,"2026-10-20 00:00:00.000000","The computer in my college laboratory is not starting properly.",finaltest@gmail.com,NULL,"Final Test",Medium,Pending,0.326828300431858,Technical
+17,Library,"2026-10-20 20:30:39.344475","Testing automatic date and time generation.",test@example.com,NULL,User,Low,Pending,0.16666666666666669,Account

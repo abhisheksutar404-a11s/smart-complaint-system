@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Complaint System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+
+        <header class="main-header">
+
+            <h1>Smart Complaint System</h1>
+
+            <p class="subtitle">
+                Tell us what went wrong — we'll take it from here.
+            </p>
+
+            <a href="admin.html" class="admin-link">
+                Admin Dashboard →
+            </a>
+
+        </header>
+
+
+        <!-- Complaint Form -->
+
+        <form id="complaint-form">
+
+            <label for="name">Name</label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your full name"
+                required
+            >
+
+
+            <label for="email">Email</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+            >
+
+
+            <label for="category">Complaint Category</label>
+
+            <select id="category" name="category" required>
+
+                <option value="" disabled selected>
+                    Select a category
+                </option>
+
+                <option value="Technical">
+                    Technical
+                </option>
+
+                <option value="Finance">
+                    Finance
+                </option>
+
+                <option value="Maintenance">
+                    Maintenance
+                </option>
+
+                <option value="Account">
+                    Account
+                </option>
+
+                <option value="Library">
+                    Library
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <!-- Priority -->
+
+            <label for="priority">
+                Complaint Priority
+            </label>
+
+            <select id="priority" name="priority" required>
+
+                <option value="" disabled selected>
+                    Select priority
+                </option>
+
+                <option value="Low">
+                    Low
+                </option>
+
+                <option value="Medium">
+                    Medium
+                </option>
+
+                <option value="High">
+                    High
+                </option>
+
+                <option value="Critical">
+                    Critical
+                </option>
+
+            </select>
+
+
+            <label for="description">
+                Complaint Description
+            </label>
+
+            <textarea
+                id="description"
+                name="description"
+                rows="5"
+                placeholder="Describe your complaint in detail..."
+                required
+            ></textarea>
+
+
+            <button type="submit">
+                Submit Complaint
+            </button>
+
+        </form>
+
+
+        <!-- Submitted Complaints -->
+
+        <div id="complaints-list">
+
+            <h2>Submitted Complaints</h2>
+
+            <div id="complaints-container">
+
+                <p id="empty-message">
+                    No complaints submitted yet.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

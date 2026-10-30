@@ -1,0 +1,38 @@
+
+# Python virtual environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Java / Maven generated files
+target/
+*.class
+
+# MLflow local database
+mlflow.db
+mlflow.db-shm
+mlflow.db-wal
+
+# Python model and generated artifacts
+*.pkl
+*.joblib
+
+# IDE settings
+.idea/
+.vscode/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# MLflow generated tracking files
+mlruns/
+
+# Downloaded JDBC drivers and extracted libraries
+big-data/jars/

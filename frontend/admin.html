@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - Smart Complaint System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Admin Dashboard JavaScript -->
+    <script src="admin.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ADMIN LOGIN -->
+        <section id="admin-login" class="admin-login">
+
+            <h2>Admin Login</h2>
+
+            <p>Please enter your admin credentials.</p>
+
+            <form id="admin-login-form">
+
+                <label for="admin-username">Username</label>
+
+                <input
+                    type="text"
+                    id="admin-username"
+                    placeholder="Enter username"
+                    required
+                >
+
+                <label for="admin-password">Password</label>
+
+                <input
+                    type="password"
+                    id="admin-password"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button type="submit">Login</button>
+
+                <p id="login-message" class="dashboard-message error" hidden></p>
+
+            </form>
+
+        </section>
+
+        <!-- Header -->
+        <div id="admin-dashboard" hidden>
+        <header class="admin-header">
+
+            <h1>Smart Complaint System</h1>
+
+            <p>Admin Dashboard</p>
+
+            <button type="button" id="admin-logout">Logout</button>
+
+        </header>
+
+        <!-- Dashboard Message -->
+        <div id="dashboard-message"
+             class="dashboard-message"
+             hidden>
+        </div>
+
+        <!-- Statistics -->
+        <section class="dashboard-stats">
+
+            <div class="stat-card">
+                <h2 id="total-complaints">0</h2>
+                <p>Total Complaints</p>
+            </div>
+
+            <div class="stat-card">
+                <h2 id="open-complaints">0</h2>
+                <p>Open</p>
+            </div>
+
+            <div class="stat-card">
+                <h2 id="progress-complaints">0</h2>
+                <p>In Progress</p>
+            </div>
+
+            <div class="stat-card">
+                <h2 id="resolved-complaints">0</h2>
+                <p>Resolved</p>
+            </div>
+
+        </section>
+
+        <!-- Analytics Dashboard -->
+        <section class="analytics-section">
+
+            <h2>Complaint Analytics</h2>
+
+            <div class="analytics-container">
+
+                <!-- Category Chart -->
+                <div class="chart-card">
+                    <h3>Complaints by Category</h3>
+                    <canvas id="categoryChart"></canvas>
+                </div>
+
+                <!-- Priority Chart -->
+                <div class="chart-card">
+                    <h3>Complaints by Priority</h3>
+                    <canvas id="priorityChart"></canvas>
+                </div>
+
+                <!-- Status Chart -->
+                <div class="chart-card">
+                    <h3>Complaints by Status</h3>
+                    <canvas id="statusChart"></canvas>
+                </div>
+
+                <!-- Date Chart -->
+            <div class="chart-card">
+                <h3>Complaints by Date</h3>
+                <canvas id="dateChart"></canvas>
+            </div>
+
+            </div>
+
+        </section>
+
+         <!-- Big Data Analytics - Apache Spark -->
+        <section class="analytics-section">
+
+            <h2>Big Data Analytics (Apache Spark)</h2>
+
+            <div class="analytics-container">
+
+                <div class="chart-card">
+                    <h3>Spark Category-wise Complaint Analysis</h3>
+                    <canvas id="sparkCategoryChart"></canvas>
+                </div>
+
+            </div>
+            
+        </section>
+
+        <!-- Recent Complaints -->
+        <section class="complaints-section">
+
+            <h2>Recent Complaints</h2>
+
+            <!-- Search and Filters -->
+            <div class="complaint-filters">
+
+                <input
+                    type="text"
+                    id="search-complaints"
+                    placeholder="Search by ID, name or description..."
+                >
+
+                <select id="category-filter">
+                    <option value="">All Categories</option>
+                    <option value="Technical">Technical</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Maintenance">Maintenance</option>
+                    <option value="Account">Account</option>
+                    <option value="Library">Library</option>
+                    <option value="Other">Other</option>
+                </select>
+                
+                <select id="status-filter">
+                    <option value="">All Statuses</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Open">Open</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Resolved">Resolved</option>
+                </select>
+
+                <select id="priority-filter">
+                    <option value="">All Priorities</option>
+                    <option value="Critical">Critical</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+
+            </div>
+
+            <!-- Complaints Table -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>AI Prediction</th>
+                            <th>Priority</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="complaints-table-body">
+
+                        <tr>
+                            <td colspan="8">Loading complaints...</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- Back Button -->
+        <a href="index.html" class="back-button">
+            ← Back to Complaint Form
+        </a>
+
+    </div> <!-- container -->
+    
+    </div> <!-- admin-dashboard -->
+
+</body>
+
+</html>
+

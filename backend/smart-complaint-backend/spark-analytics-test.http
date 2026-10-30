@@ -1,0 +1,4 @@
+### Test Apache Spark Category Analytics API
+
+GET http://localhost:8080/api/complaints/spark/category-analytics
+Accept: application/json

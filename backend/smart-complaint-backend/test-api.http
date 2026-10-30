@@ -1,0 +1,119 @@
+
+### 1. Get All Complaints
+GET http://localhost:8080/api/complaints
+Accept: application/json
+
+
+### 2. Create New Complaint
+POST http://localhost:8080/api/complaints
+Content-Type: application/json
+
+{
+  "name": "Abhishek",
+  "email": "abhishek@gmail.com",
+  "category": "Road",
+  "description": "Garbage has not been collected for several days",
+  "status": "Pending",
+  "location": "Kolhapur",
+  "priority": "High",
+  "createdAt": "2026-10-10"
+}
+
+
+### 3. Update Complaint ID 1 Status
+PATCH http://localhost:8080/api/complaints/1/status
+Content-Type: application/json
+
+{
+  "status": "In Progress"
+}
+
+
+### 4. Verify Updated Complaint
+GET http://localhost:8080/api/complaints
+Accept: application/json
+
+
+### 5. Update Complaint ID 1 to Resolved
+PATCH http://localhost:8080/api/complaints/1/status
+Content-Type: application/json
+
+{
+  "status": "Resolved"
+}
+
+
+### 6. Verify Final Status
+GET http://localhost:8080/api/complaints
+Accept: application/json
+
+### Test Dashboard Statistics API
+GET http://localhost:8080/api/complaints/statistics
+
+### Test Category Analytics API
+GET http://localhost:8080/api/complaints/analytics/categories
+
+### Test 1: Access complaints without authentication
+GET http://localhost:8080/api/complaints
+
+### Test 2: Access complaints as ADMIN
+GET http://localhost:8080/api/complaints
+
+
+### Test 3: Submit complaint without authentication
+POST http://localhost:8080/api/complaints
+Content-Type: application/json
+
+{
+    "name": "Security Test User",
+    "email": "securitytest@example.com",
+    "category": "Technical",
+    "description": "Testing public complaint submission",
+    "status": "Pending",
+    "location": "Kolhapur",
+    "priority": "Medium"
+}
+
+### Test 4: Update status without authentication
+PATCH http://localhost:8080/api/complaints/13/status
+Content-Type: application/json
+
+{
+    "status": "Resolved"
+}
+
+### Test 5: Update status as ADMIN
+PATCH http://localhost:8080/api/complaints/13/status
+Content-Type: application/json
+
+{
+    "status": "Resolved"
+}
+
+### Test 6: Statistics without authentication
+GET http://localhost:8080/api/complaints/statistics
+
+### Test 7: Category analytics without authentication
+GET http://localhost:8080/api/complaints/analytics/categories
+
+### Test 8: Category analytics as ADMIN
+GET http://localhost:8080/api/complaints/analytics/categories
+
+
+### Get Priority Analytics
+GET http://localhost:8080/api/complaints/analytics/priorities
+
+
+### Get Date Analytics
+GET http://localhost:8080/api/complaints/analytics/dates
+
+
+### Get Status Analytics
+GET http://localhost:8080/api/complaints/analytics/statuses
+
+
+### Check Spark Category Analytics
+GET http://localhost:8080/api/complaints/spark/category-analytics
+
+### Spark Category Analytics
+GET http://localhost:8080/api/complaints/spark/category-analytics

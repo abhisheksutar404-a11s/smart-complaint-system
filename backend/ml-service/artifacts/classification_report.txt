@@ -1,0 +1,12 @@
+              precision    recall  f1-score   support
+
+     Account       0.00      0.00      0.00         2
+     Finance       1.00      1.00      1.00         2
+     Library       1.00      1.00      1.00         2
+ Maintenance       0.67      1.00      0.80         2
+       Other       0.67      1.00      0.80         2
+   Technical       0.50      0.50      0.50         2
+
+    accuracy                           0.75        12
+   macro avg       0.64      0.75      0.68        12
+weighted avg       0.64      0.75      0.68        12
